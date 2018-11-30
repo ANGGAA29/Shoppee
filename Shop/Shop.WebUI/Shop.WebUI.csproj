@@ -193,6 +193,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -294,6 +295,10 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,6 +313,24 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Core\Shop.Core.csproj">
+      <Project>{a694e41e-91eb-44cf-9713-8ce4ca0c81b6}</Project>
+      <Name>Shop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.DAL.InMemory\Shop.DAL.InMemory.csproj">
+      <Project>{2373e380-163d-4dc2-944d-1f883855ca47}</Project>
+      <Name>Shop.DAL.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.DAL.SQL\Shop.DAL.SQL.csproj">
+      <Project>{b279c9ad-885f-4243-824d-3fadae25f7f5}</Project>
+      <Name>Shop.DAL.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Services\Shop.Services.csproj">
+      <Project>{574d7184-f7f1-487d-9263-3fcf70e77bde}</Project>
+      <Name>Shop.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

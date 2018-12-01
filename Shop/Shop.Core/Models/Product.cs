@@ -8,12 +8,9 @@ using System.Threading.Tasks;
 
 namespace Shop.Core.Models
 {
-    public class Product
+    public class Product: BaseEntity
     {
-       //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        //[Key]
-        public string Id { get; set; }
-
+             
         [StringLength(20)]
         public string Name { get; set; }
         public string Description { get; set; }
@@ -23,9 +20,5 @@ namespace Shop.Core.Models
         public string Category { get; set; }
         public string Image { get; set; }
 
-        public Product()
-        {
-            this.Id = Guid.NewGuid().ToString();
-        }
     }
 }

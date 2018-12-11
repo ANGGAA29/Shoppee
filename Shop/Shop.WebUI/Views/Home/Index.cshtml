@@ -30,7 +30,7 @@
             <p>@item.Description</p>
         </div>
         <div class="col-md-12">
-            <p>@item.Price</p>
+            <p>@String.Format("{0:c}", @item.Price)</p>
         </div>
         <div class="col-md-12">
             <a href="@Url.Action("AddToBasket", "Basket", new { Id = item.Id})" class="btn btn-default">Add to Basket</a>

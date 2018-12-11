@@ -8,57 +8,62 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Product</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+    <div class="col-md-2">
+        <img class="img-responsive" src="~/Content/ProductImages/@Model.Image" />
+    </div>
+    <div class="col-md-10">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Category)
+            </dd>
+            <dt></dt>
+            <dd>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-default" />                    
+                    </div>
+                }
+            </dd>
+        </dl> 
+    </div>
 </div>
+<div class="col-md-12 clearfix"></div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+  
+
+

@@ -65,6 +65,10 @@
     <Compile Include="Migrations\201812120306050_AddStreetColumnInCustomer.Designer.cs">
       <DependentUpon>201812120306050_AddStreetColumnInCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812120353528_AddOrders.cs" />
+    <Compile Include="Migrations\201812120353528_AddOrders.Designer.cs">
+      <DependentUpon>201812120353528_AddOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLRepository.cs" />
@@ -85,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812120306050_AddStreetColumnInCustomer.resx">
       <DependentUpon>201812120306050_AddStreetColumnInCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812120353528_AddOrders.resx">
+      <DependentUpon>201812120353528_AddOrders.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

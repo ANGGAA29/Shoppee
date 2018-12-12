@@ -4,25 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Shop.Core.Contracts;
+using Shop.Core.Models;
+using Shop.Core.ViewModels;
 using Shop.WebUI;
 using Shop.WebUI.Controllers;
 
 namespace Shop.WebUI.Tests.Controllers
 {
     [TestClass]
-    public class HomeControllerTest
+    public class HomeControllerTests
     {
         [TestMethod]
         public void Index()
         {
             //// Arrange
-            //HomeController controller = new HomeController();
+            IRepository<Product> productContext = new Mocks.MockContext<Product>();
+            IRepository<ProductCategory> productCategoryContext = new Mocks.MockContext<ProductCategory>();
+
+            productContext.Insert(new Product());
+            HomeController controller = new HomeController(productContext, productCategoryContext);
 
             //// Act
-            //ViewResult result = controller.Index() as ViewResult;
+            ViewResult result = controller.Index() as ViewResult;
+            var viewModel = (ProductListViewModel) result.ViewData.Model;
 
             //// Assert
-            //Assert.IsNotNull(result);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(1, viewModel.Products.Count());
         }
 
         [TestMethod]

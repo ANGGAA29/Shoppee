@@ -12,6 +12,7 @@ using Shop.DAL.InMemory;
 
 namespace Shop.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductManagerController : Controller
     {
         IRepository<Product> context;

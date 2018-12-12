@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Shop.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductCategoryManagerController : Controller
     {
         IRepository<ProductCategory> context;

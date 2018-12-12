@@ -57,6 +57,14 @@
     <Compile Include="Migrations\201812111850383_AddBasket.Designer.cs">
       <DependentUpon>201812111850383_AddBasket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812120152046_AddCustomers.cs" />
+    <Compile Include="Migrations\201812120152046_AddCustomers.Designer.cs">
+      <DependentUpon>201812120152046_AddCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812120306050_AddStreetColumnInCustomer.cs" />
+    <Compile Include="Migrations\201812120306050_AddStreetColumnInCustomer.Designer.cs">
+      <DependentUpon>201812120306050_AddStreetColumnInCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLRepository.cs" />
@@ -66,18 +74,24 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shop.Core\Shop.Core.csproj">
-      <Project>{A694E41E-91EB-44CF-9713-8CE4CA0C81B6}</Project>
-      <Name>Shop.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Migrations\201812020351565_Initial.resx">
       <DependentUpon>201812020351565_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812111850383_AddBasket.resx">
       <DependentUpon>201812111850383_AddBasket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812120152046_AddCustomers.resx">
+      <DependentUpon>201812120152046_AddCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812120306050_AddStreetColumnInCustomer.resx">
+      <DependentUpon>201812120306050_AddStreetColumnInCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Core\Shop.Core.csproj">
+      <Project>{a694e41e-91eb-44cf-9713-8ce4ca0c81b6}</Project>
+      <Name>Shop.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
